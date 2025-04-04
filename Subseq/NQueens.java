@@ -1,10 +1,13 @@
 package Recursion.Subseq;
+//recurrence relation T(N)=N*T(N-1)+O(N^2)
+//time complexity O(N^3+N!)= O(N!)
 
 public class NQueens {
     public static void main(String[] args) {
         int size=4;
         boolean [][]board =new boolean[size][size];
-        queens(board,0);
+
+        System.out.println(queens(board,0));
     }
     public static int queens(boolean[][] board,int row){
         if (row == board.length ) {
@@ -50,16 +53,23 @@ public class NQueens {
     }
 
     private static void displayChess(boolean[][] board) {
+        int i=0;
         for (boolean[] arr:board){
             for (boolean element: arr){
+                i++;
                 if (element) {
-                    System.out.print(" Q ");
+                    System.out.print("\uD83D\uDC51");
                 }
                 else {
-                    System.out.print(" X ");
+                    if((i&1)==1)
+                    System.out.print("⬜");
+                    else
+                        System.out.print("⬛");
                 }
             }
             System.out.println();
+            if((board.length&1)!=1)
+                i++;
         }
         System.out.println();
         System.out.println("****************");
