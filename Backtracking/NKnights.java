@@ -1,4 +1,4 @@
-package Recursion.Subseq;
+package Recursion.Backtracking;
 
 public class NKnights {
     public static void main(String[] args) {

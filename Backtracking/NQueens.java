@@ -1,4 +1,4 @@
-package Recursion.Subseq;
+package Recursion.Backtracking;
 //recurrence relation T(N)=N*T(N-1)+O(N^2)
 //time complexity O(N^3+N!)= O(N!)
 
